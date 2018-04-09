@@ -32,7 +32,7 @@ class Main extends PluginBase implements CommandExecutor, Listener {
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
 
-  public function onCommand(CommandSender $player, Command $command, $label, array $args) {
+  public function onCommand(CommandSender $player, Command $command, $label, array $args)bool {
     if(!($player instanceof Player)) {
       $player->sendMessage("§cCommand must be used in-game.");
       return true;
